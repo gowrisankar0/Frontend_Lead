@@ -1,0 +1,29 @@
+.verify__loading{
+    text-align: center;
+    margin:20px;
+}
+
+.verify{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:95px;
+    text-align: center;
+    margin-top: 20px;
+}
+.verified{
+    margin-top: 30px;
+}
+
+.verify button{
+    background-color: brown;
+    border:1ox solid rebeccapurple;
+    cursor:pointer;
+    padding:5px 10px;
+    font-size: 14px;
+    border:none;
+    outline: none;
+    color:white;
+
+}

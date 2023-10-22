@@ -1,0 +1,25 @@
+.home{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.home input{
+    padding-bottom: 10px;
+    width:200px;
+    padding: 10px 5px;
+    outline: none;
+}
+
+.home button {
+    border:none;
+    outline:none;
+    background-color: aquamarine;
+    border-radius: 5px;
+    margin-top:5px;
+    font-size: 16px;
+    padding:10px 15px;
+}

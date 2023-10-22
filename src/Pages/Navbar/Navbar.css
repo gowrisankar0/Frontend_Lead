@@ -1,0 +1,33 @@
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px 0;
+    background-color: blue;
+}
+nav >h1{
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+}
+nav ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:30%;
+}
+nav ul a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    
+
+}
+
+nav ul p{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+
+}

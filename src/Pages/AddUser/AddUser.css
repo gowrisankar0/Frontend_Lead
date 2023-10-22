@@ -1,0 +1,53 @@
+.adduser{
+    max-width:1200px;
+    margin:0 auto;
+    margin-top:30px;
+    height: 100%;
+}
+.home_title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.home_container{
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:8%;
+}
+.home_form_container{
+    box-shadow: 1px 4px 12px -2px rgba(0,0,0,0.43);
+    background: #0575e6;
+    padding:30px;
+    width:500px;
+}
+.home_form_container input{
+    border:1px solid white;
+    outline: none;
+    padding:15px 10px;
+    width:80%;
+    border-radius: 8px;
+    margin: 10px 0;
+    background: transparent;
+    color:white;
+    font-size: 14px;
+}
+.home_form_container input::placeholder{
+    color:white;
+}
+.home_form_container input:disabled{
+    background-color: #e5e5e55a;
+}
+.home_form_container button{
+    background: transparent;
+    border: 1px solid white;
+    outline:none;
+    font-size: 18px;
+    color:white;
+    padding: 10px;
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+}
