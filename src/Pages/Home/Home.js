@@ -7,7 +7,13 @@ const Home = () => {
   const [email,setEmail] =useState("");
   const [password,setPassword] =useState("");
 
+
+
 const signUp = async()=>{
+
+  if(!name || !email || !password){
+    alert("All fields are mandatory")
+  }
 console.log(name,email,password);
 const {data} =await axios.post("http://localhost:4000/user/signup",{
   name,
@@ -16,11 +22,16 @@ const {data} =await axios.post("http://localhost:4000/user/signup",{
 });
 console.log(data);
 alert(data.msg)
+
+setName("")
+setEmail("")
+setPassword("")
 }
 
   return (
     <div className='home'>
-     <div>
+     <div className='form-container'>
+      <h1>Register Here</h1><hr />
       
      <lable>Name:</lable><br/>
      <input type="text" placeholder='enter a name' value={name} onChange={(e)=>setName(e.target.value)}/><br/>
@@ -31,7 +42,7 @@ alert(data.msg)
 
      <lable>Password:</lable><br/>
      <input type="password" placeholder='enter a password' value={password} onChange={(e)=>setPassword(e.target.value)}/><br/>
-     <button onClick={signUp}>SignUp</button>
+          <button onClick={signUp}>SignUp</button>
      </div>
     </div>
   )

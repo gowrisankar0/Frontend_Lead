@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import {Link} from "react-router-dom";
-import User from "../../Components/User/User";
-import "./Users.css"
-const Users = () => {
+
+import Update from "../../Components/Update/Update"
+const UpdateLead = () => {
   const [users,setUsers] =useState([]);
 
   let token =localStorage.getItem("token")
@@ -28,19 +28,19 @@ useEffect(()=>{
 },[])
 
 
-// const deleteUser =async(id)=>{
-// try {
-//   const {data} = await axios.delete(`http://localhost:4000/users/delete/${id}`,{
-//     headers:{
-//       Authorization:token
-//     }
-//   })
-//   alert(data.msg)
-//   getdata()
-// } catch (error) {
-//   console.log(error);
-// }
-// }
+const deleteUser =async(id)=>{
+try {
+  const {data} = await axios.delete(`http://localhost:4000/users/delete/${id}`,{
+    headers:{
+      Authorization:token
+    }
+  })
+  alert(data.msg)
+  getdata()
+} catch (error) {
+  console.log(error);
+}
+}
 
 
 
@@ -57,7 +57,7 @@ useEffect(()=>{
           </div>
         ) : (
           users.map((user) => (
-            <User
+            <Update
               key={user._id}
               id={user._id}
               name={user.name}
@@ -65,7 +65,7 @@ useEffect(()=>{
               adress={user.adress}
               contact={user.contact}
               enquiry={user.enquiry}
-              // deleteUser={() => deleteUser(user._id)}
+              deleteUser={() => deleteUser(user._id)}
             />
           ))
         )}
@@ -73,4 +73,4 @@ useEffect(()=>{
   </div>
 }
 
-export default Users
+export default UpdateLead

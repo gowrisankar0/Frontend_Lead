@@ -1,6 +1,7 @@
 import React from 'react'
-import "./User.css"
-const User = ({ id, name, age,  adress, contact,enquiry, }) => {
+import "./Update.css";
+import {Link} from "react-router-dom"
+const Update = ({ id, name, age,  adress, contact,enquiry, UpdateLead }) => {
     return (
         <div className='user'>
          <h2>
@@ -23,7 +24,10 @@ const User = ({ id, name, age,  adress, contact,enquiry, }) => {
          </h3>
      <div className='user_bottom'>
 
-   {/* <button className='user_delete' onClick={deleteUser}>Delete</button> */}
+        {/* <Link to="/add-user"><button id={id}>Update</button></Link> */}
+
+   {/* <button className='user_delete' onClick={UpdateLead} >Update</button> */}
+   <Link to={`/update-lead/${id}`}><button className='btn'>Update</button></Link>
 
      </div>
 
@@ -35,4 +39,4 @@ const User = ({ id, name, age,  adress, contact,enquiry, }) => {
     )
 }
 
-export default User
+export default Update

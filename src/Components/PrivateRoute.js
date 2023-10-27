@@ -13,17 +13,18 @@ useEffect(()=>{
     let token =localStorage.getItem("token");
     if(token){
         dispatch(handleLogin(token))
-        
+    }
 
         setTimeout(() => {
             setLoading(false)
         }, 500);
-    }
+    
 },[])
 
 if(loading){
-    return <h1>Loading....</h1>
+    return <h1 style={{color:"white"}}>Loading....</h1>
 }
+
 if(!user){
     return <Navigate to="/login"/>
 }

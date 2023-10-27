@@ -1,6 +1,6 @@
 import React from 'react'
-import "./User.css"
-const User = ({ id, name, age,  adress, contact,enquiry, }) => {
+import "./Delete.css";
+const Delete = ({ id, name, age,  adress, contact,enquiry, deleteUser }) => {
     return (
         <div className='user'>
          <h2>
@@ -23,7 +23,7 @@ const User = ({ id, name, age,  adress, contact,enquiry, }) => {
          </h3>
      <div className='user_bottom'>
 
-   {/* <button className='user_delete' onClick={deleteUser}>Delete</button> */}
+   <button onClick={deleteUser}>Delete</button>
 
      </div>
 
@@ -35,4 +35,4 @@ const User = ({ id, name, age,  adress, contact,enquiry, }) => {
     )
 }
 
-export default User
+export default Delete

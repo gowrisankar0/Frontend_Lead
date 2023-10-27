@@ -9,18 +9,22 @@ nav >h1{
     font-size: 30px;
     font-weight: bold;
     color:white;
+    
 }
 nav ul{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    width:30%;
+    width:42%;
 }
 nav ul a{
     text-decoration: none;
     color:white;
     font-size: 20px;
-    
+    transition: 0.8s;
+    margin-left: 12px;
+    font-weight: 700px;
+    font-weight: bold;
 
 }
 
@@ -28,6 +32,46 @@ nav ul p{
     text-decoration: none;
     color:white;
     font-size: 20px;
+    margin-left: 15px;
     cursor: pointer;
+    font-weight: bolder;
+    height: auto;
+    width: auto;
+    background-color: red;
+    padding: 3.7px 11px;
+    border-radius: 17px;
+    text-align: center;
+    position: relative;
+    top:2px;
+    border:1.5px solid white;
+    transition: 0.8s;
 
 }
+nav ul p:hover{
+    background-color: rgba(255, 0, 0, 0.829);
+    transform: scale(0.95)
+
+}
+.login{
+    text-decoration: none;
+    color:rgb(58, 0, 250);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    background-color: rgb(229, 210, 65);
+    padding: 3.7px 13px;
+    border-radius: 17px;
+    text-align: center;
+    position: relative;
+    top:2px;
+    left:7px;
+    border:1.6px solid rgb(255, 249, 249);
+    
+}
+.login:hover{
+    background-color: rgb(46, 194, 202);
+    transform: scale(0.92)
+}
+

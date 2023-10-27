@@ -17,9 +17,51 @@
 .home button {
     border:none;
     outline:none;
-    background-color: aquamarine;
-    border-radius: 5px;
-    margin-top:5px;
+    background-color:blue;
+    border-radius: 6px;
+  margin-top: 29px;
     font-size: 16px;
     padding:10px 15px;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    transition: 0.8s;
+    border: 1px solid rgb(190, 31, 31);
+    cursor: pointer;
+    
+}
+.form{
+    height:310px;
+    width: 450px;
+    background-color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 6px;
+    
+}
+.form >lable{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.form >input{
+    width:95%;
+    border-radius: 5px;
+    background-color: rgba(170, 170, 170, 0.475);
+    margin-top: 9px;
+
+
+}
+hr{
+    border: 1.1px solid rgba(0, 0, 0, 0.458);
+    margin-top: 4px;
+}
+.form >input::placeholder{
+    text-align: center;
+    color: rgb(68, 67, 67);
+    font-size: 15px;
+}
+
+.home button:hover{
+    background-color: rgb(17, 84, 186);
+    transform: scale(0.98);
 }

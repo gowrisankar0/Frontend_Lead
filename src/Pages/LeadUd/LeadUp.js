@@ -1,22 +1,60 @@
 import React, {useEffect, useState } from 'react'
 
-import "./AddUser.css";
-import axios from "axios"
+import "./Leadup.css";
+import axios from "axios";
+import { useParams,useNavigate } from 'react-router-dom';
 
 
 
-const AddUser=()=> {
+const LeadUp=()=> {
+
+    const {id}=useParams();
+    const navigate =useNavigate()
+    const [userInfo,setUserInfo]=useState({
+    
+      name:"",
+      age:"",
+      adress:"",
+      contact:"",
+      enquiry:"",
+    })
+
+    let token =localStorage.getItem("token")
  
+    const getdata =async()=>{
+        try {
+          const {data} =await axios.get(`http://localhost:4000/users/single/${id}`,{
+            headers:{
+              Authorization:token
+            }
+          })
+          console.log(data);
+          setUserInfo({
+            name:data.name,
+            age:data.age,
+            adress:data.adress,
+            contact:data.contact,
+            enquiry:data.enquiry
+          })
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    
+    useEffect(()=>{
+     
+      getdata()
+    },[])
+    
 
 
-  const [userInfo,setUserInfo]=useState({
-  
-    name:"",
-    age:"",
-    adress:"",
-    contact:"",
-    enquiry:"",
-  })
+
+
+
+
+
+
+
   useEffect(()=>{
     setUserInfo((currInfo)=>{
       return{
@@ -40,7 +78,9 @@ const AddUser=()=> {
   };
 
 
-  const addUser=async()=>{
+
+
+  const UpdateLead=async()=>{
 
     if(!userInfo.name || !userInfo.age || !userInfo.adress || !userInfo.contact || !userInfo.enquiry){
       alert("please enter all details");
@@ -48,7 +88,7 @@ const AddUser=()=> {
     }
    let token = localStorage.getItem("token")
     try {
-      const respoce =await axios.post("http://localhost:4000/users/add",userInfo,{
+      const respoce =await axios.put(`http://localhost:4000/users/update/${id}`,userInfo,{
         headers:{
           Authorization:token
         }
@@ -97,7 +137,7 @@ useEffect(()=>{
            <input type="number" placeholder='Enter Lead Mobile' name="contact"  value={userInfo.contact} onChange={handleChange}/><br/>
            <input type="text" placeholder='Enter Lead Enquiry' name="enquiry"  value={userInfo.enquiry} onChange={handleChange}/><br/>
 
-       <button onClick={addUser}>Add User</button>
+       <button onClick={UpdateLead}>Update Lead</button>
         </div>
 !
 
@@ -108,4 +148,4 @@ useEffect(()=>{
   )
 }
 
-export default AddUser
+export default LeadUp
