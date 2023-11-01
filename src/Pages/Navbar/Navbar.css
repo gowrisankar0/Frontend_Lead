@@ -26,6 +26,7 @@ nav ul a{
     font-weight: 700px;
     font-weight: bold;
 
+
 }
 
 nav ul p{
@@ -75,3 +76,8 @@ nav ul p:hover{
     transform: scale(0.92)
 }
 
+nav ul a:hover {
+background-color: rgb(68, 68, 68);
+padding: 2px 5px;
+border-radius: 5px;
+}
