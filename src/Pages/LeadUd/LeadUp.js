@@ -23,7 +23,7 @@ const LeadUp=()=> {
  
     const getdata =async()=>{
         try {
-          const {data} =await axios.get(`http://localhost:4000/users/single/${id}`,{
+          const {data} =await axios.get(`https://lead-server.onrender.com/users/single/${id}`,{
             headers:{
               Authorization:token
             }
@@ -88,7 +88,7 @@ const LeadUp=()=> {
     }
    let token = localStorage.getItem("token")
     try {
-      const respoce =await axios.put(`http://localhost:4000/users/update/${id}`,userInfo,{
+      const respoce =await axios.put(`https://lead-server.onrender.com/users/update/${id}`,userInfo,{
         headers:{
           Authorization:token
         }
@@ -120,7 +120,6 @@ useEffect(()=>{
   })
 
 },[])
-
 
 
 

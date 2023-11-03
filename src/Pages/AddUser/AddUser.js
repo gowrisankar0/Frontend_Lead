@@ -48,7 +48,7 @@ const AddUser=()=> {
     }
    let token = localStorage.getItem("token")
     try {
-      const respoce =await axios.post("http://localhost:4000/users/add",userInfo,{
+      const respoce =await axios.post("https://lead-server.onrender.com/users/add",userInfo,{
         headers:{
           Authorization:token
         }

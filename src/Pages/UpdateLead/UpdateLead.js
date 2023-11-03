@@ -10,7 +10,7 @@ const UpdateLead = () => {
 
   const getdata =async()=>{
     try {
-      const {data} =await axios.get("http://localhost:4000/users/all",{
+      const {data} =await axios.get("https://lead-server.onrender.com/users/all",{
         headers:{
           Authorization:token
         }
@@ -30,7 +30,7 @@ useEffect(()=>{
 
 const deleteUser =async(id)=>{
 try {
-  const {data} = await axios.delete(`http://localhost:4000/users/delete/${id}`,{
+  const {data} = await axios.delete(`https://lead-server.onrender.com/users/delete/${id}`,{
     headers:{
       Authorization:token
     }

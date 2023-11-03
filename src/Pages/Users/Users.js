@@ -10,7 +10,7 @@ const Users = () => {
 
   const getdata =async()=>{
     try {
-      const {data} =await axios.get("http://localhost:4000/users/all",{
+      const {data} =await axios.get("https://lead-server.onrender.com/users/all",{
         headers:{
           Authorization:token
         }

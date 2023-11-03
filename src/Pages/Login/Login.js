@@ -18,7 +18,7 @@ const login = async()=>{
     alert("please provide all informations");
     return
   }
-const responce =await axios.post("http://localhost:4000/user/login",{
+const responce =await axios.post("https://lead-server.onrender.com/user/login",{
 
   email,
   password
@@ -26,7 +26,7 @@ const responce =await axios.post("http://localhost:4000/user/login",{
 
   localStorage.setItem("token",responce.data)
 dispatch(handleLogin(responce.data))
-navigate("/add-user")
+navigate("/add-user");
 // localStorage.setItem("token",responce.data)
 // dispatch(handleLogin(responce.data))
 

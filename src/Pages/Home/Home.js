@@ -15,7 +15,7 @@ const signUp = async()=>{
     alert("All fields are mandatory")
   }
 console.log(name,email,password);
-const {data} =await axios.post("http://localhost:4000/user/signup",{
+const {data} =await axios.post("https://lead-server.onrender.com/user/signup",{
   name,
   email,
   password

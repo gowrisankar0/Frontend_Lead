@@ -11,7 +11,7 @@ const [loading,setLoading] =useState(true);
 
 const verifyUser = async()=>{
 try {
-    const responce =await axios.get(`http://localhost:4000/user/verify/${token}`);
+    const responce =await axios.get(`https://lead-server.onrender.com/user/verify/${token}`);
     alert(responce.data.msg); 
     setLoading(false)  
 } 
