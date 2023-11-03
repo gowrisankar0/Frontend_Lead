@@ -72,12 +72,16 @@ nav ul p:hover{
     
 }
 .login:hover{
-    background-color: rgb(46, 194, 202);
-    transform: scale(0.92)
+    background-color: rgb(46, 194, 202) !important;
+    transform: scale(0.92) !important;
 }
 
-nav ul a:hover {
+/* nav ul a:hover {
 background-color: rgb(68, 68, 68);
 padding: 2px 5px;
 border-radius: 5px;
-}
+} */ 
+
+/* nav ul a:active{
+    background-color: red;
+} */
